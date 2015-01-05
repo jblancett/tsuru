@@ -134,6 +134,7 @@ func (i *EC2IaaS) CreateMachine(params map[string]string) (*iaas.Machine, error)
 		MinCount:     1,
 		MaxCount:     1,
 		KeyName:      keyName,
+		EbsOptimized: true,
 	}
 	securityGroup, ok := params["securityGroup"]
 	if ok {
